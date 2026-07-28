@@ -1,0 +1,391 @@
+/* ---------- Shared card ---------- */
+.intake-card, .log-form, .risk-panel, .history-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: 24px;
+}
+
+/* ---------- Intake ---------- */
+.intake-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.intake-card__title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.intake-card__modes {
+  display: flex;
+  gap: 4px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 3px;
+}
+
+.mode-tab {
+  border: none;
+  background: transparent;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-ink-soft);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.mode-tab--active {
+  background: var(--color-surface);
+  color: var(--color-ink);
+  box-shadow: 0 1px 2px rgba(22,38,43,0.08);
+}
+
+.intake-textarea {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: vertical;
+  color: var(--color-ink);
+  background: var(--color-bg);
+}
+
+.intake-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.intake-hint {
+  font-size: 12px;
+  color: var(--color-ink-soft);
+}
+
+.btn-primary {
+  background: var(--color-ink);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-primary:disabled {
+  background: var(--color-border);
+  color: var(--color-ink-soft);
+  cursor: not-allowed;
+}
+
+.btn-primary:not(:disabled):hover {
+  background: var(--color-accent);
+}
+
+.intake-upload {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 28px;
+  align-items: center;
+  text-align: center;
+}
+
+.intake-upload__input {
+  display: none;
+}
+
+.intake-upload__label {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--color-accent);
+  font-size: 14px;
+}
+
+.intake-error {
+  margin-top: 14px;
+  background: var(--color-critical-soft);
+  color: var(--color-critical);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 13px;
+}
+
+/* ---------- Log Customer Complaint form ---------- */
+.log-form__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.log-form__title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.log-form__ref {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.log-form__banner {
+  background: var(--color-major-soft);
+  color: var(--color-major);
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  margin: 12px 0;
+}
+
+.log-form__banner--info {
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+.log-form__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 20px;
+  margin-top: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.field__label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-ink-soft);
+  font-weight: 600;
+}
+
+.field__value {
+  font-size: 14px;
+  color: var(--color-ink);
+}
+
+.field__value--mono {
+  font-family: var(--font-mono);
+}
+
+.field__value--empty {
+  color: var(--color-ink-soft);
+}
+
+.field--flagged .field__value {
+  color: var(--color-critical);
+  font-style: italic;
+}
+
+.log-form__description {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+.log-form__description-text {
+  margin: 6px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ---------- AI Copilot Risk Assessment panel ---------- */
+.risk-panel {
+  background: var(--color-ink);
+  color: white;
+  border: none;
+}
+
+.risk-panel__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.risk-panel__title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.risk-panel__badge {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.12);
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+.risk-panel__pending {
+  font-size: 13.5px;
+  color: rgba(255,255,255,0.7);
+  padding: 20px 0;
+}
+
+.risk-severity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0 16px;
+}
+
+.risk-severity__label {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border: 2.5px solid currentColor;
+  border-radius: 3px;
+  transform: rotate(-3deg);
+}
+
+.risk-severity--critical .risk-severity__label { color: #E39089; }
+.risk-severity--major .risk-severity__label { color: #E8BD82; }
+.risk-severity--minor .risk-severity__label { color: #8FCBA6; }
+
+.risk-severity__score {
+  font-family: var(--font-mono);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.risk-severity__scale {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  font-weight: 500;
+}
+
+.risk-gauge {
+  height: 6px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.risk-gauge__fill {
+  height: 100%;
+  border-radius: 3px;
+}
+
+.risk-gauge__fill--critical { background: #F0847C; }
+.risk-gauge__fill--major { background: #F2B565; }
+.risk-gauge__fill--minor { background: #7ED1A0; }
+
+.risk-block {
+  margin-bottom: 16px;
+}
+
+.risk-block__label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.55);
+  font-weight: 600;
+}
+
+.risk-block__text {
+  margin: 5px 0 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.92);
+}
+
+.risk-block--summary {
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.risk-panel__disclaimer {
+  font-size: 11px;
+  color: rgba(255,255,255,0.45);
+  margin: 4px 0 0;
+}
+
+/* ---------- History ---------- */
+.history-card__title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+
+.history-empty {
+  text-align: center;
+  color: var(--color-ink-soft);
+  font-size: 13.5px;
+  padding: 24px;
+}
+
+.history-table__row {
+  display: grid;
+  grid-template-columns: 1.2fr 1.5fr 1.2fr 1fr 1fr;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 13.5px;
+  align-items: center;
+}
+
+.history-table__row--head {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-ink-soft);
+  font-weight: 600;
+  border-bottom: 1px solid var(--color-ink);
+}
+
+.history-table__ref {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--color-accent);
+}
+
+.severity-dot {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+  font-size: 12.5px;
+}
+
+.severity-dot::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.severity-dot--critical::before { background: var(--color-critical); }
+.severity-dot--critical { color: var(--color-critical); }
+.severity-dot--major::before { background: var(--color-major); }
+.severity-dot--major { color: var(--color-major); }
+.severity-dot--minor::before { background: var(--color-minor); }
+.severity-dot--minor { color: var(--color-minor); }
