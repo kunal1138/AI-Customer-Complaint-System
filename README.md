@@ -1,3 +1,8 @@
+## 🎥 Demo Videos
+
+- **Product Demo:** [Watch on YouTube](https://youtu.be/VdAci4ISgwg)
+- **Code Walkthrough:** [Watch on YouTube](https://youtu.be/z7xBvKaU78g)
+
 # 🤖 AI Customer Complaint System
 
 An AI-powered customer complaint management system built using **React**, **Redux Toolkit**, **FastAPI**, **LangGraph**, and **Groq LLM**. The system helps collect customer complaints, analyze their severity, and provide AI-assisted responses through an intelligent workflow.
